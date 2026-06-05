@@ -232,11 +232,21 @@
   .hint-line{text-align:center;font-size:11px;color:var(--faint);margin-top:20px;letter-spacing:.02em;max-width:380px}
   .hint-line b{color:#9aa0c4}
 
+  /* ---- tablet / mobile: stack vertically, Simulator on top, phone below ---- */
   @media(max-width:860px){
-    body{padding:24px 14px}
-    .stage{gap:30px}
-    .panel{order:2;width:340px}
-    .phone{order:1}
+    body{padding:20px 14px;align-items:flex-start}
+    .stage{flex-direction:column;flex-wrap:nowrap;gap:26px;width:100%}
+    .panel{order:1;width:100%;max-width:430px}
+    .phonecol{order:2;width:100%;display:flex;flex-direction:column;align-items:center}
+  }
+  /* ---- small phones: scale the device frame to fit narrow screens ---- */
+  @media(max-width:380px){
+    .phone{transform:scale(.9);transform-origin:top center;margin-bottom:-66px}
+    .hint-line{transform:translateY(-50px)}
+  }
+  @media(max-width:340px){
+    .phone{transform:scale(.82);margin-bottom:-120px}
+    .hint-line{transform:translateY(-100px)}
   }
 </style>
 </head>
@@ -288,7 +298,7 @@
     </section>
 
     <!-- ===================== PHONE ===================== -->
-    <div>
+    <div class="phonecol">
     <div class="phone">
       <div class="notch"></div>
       <div class="screen">
