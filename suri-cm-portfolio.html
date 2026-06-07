@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Suri CM - Driving AI-Powered Digital Transformation</title>
+<meta name="description" content="Suri CM - Principal Architect driving AI-powered digital transformation. The hybrid Buyer / Seller / Technologist advantage." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --navy-900:#070b1f;
+  --navy-800:#0b1230;
+  --navy-700:#0f1a45;
+  --brand-navy:#1b2a78;
+  --blue:#3b7bff;
+  --blue-bright:#4f8bff;
+  --purple:#7c2fd6;
+  --teal:#2bb6a8;
+  --ink:#0c1024;
+  --ink-soft:#3a4060;
+  --muted:#6b7290;
+  --paper:#f6f7fb;
+  --paper-2:#eef1f8;
+  --white:#ffffff;
+  --line:rgba(12,16,36,.08);
+  --grad:linear-gradient(90deg,var(--brand-navy),var(--blue),var(--purple),var(--teal));
+  --grad-soft:linear-gradient(120deg,#e8edff,#f3eaff,#e6fbf7);
+  --radius:22px;
+  --shadow-sm:0 1px 2px rgba(12,16,36,.06),0 4px 14px rgba(12,16,36,.05);
+  --shadow:0 10px 40px rgba(12,16,36,.10);
+  --shadow-lg:0 30px 80px rgba(11,18,48,.18);
+  --maxw:1180px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  color:var(--ink);
+  background:var(--paper);
+  -webkit-font-smoothing:antialiased;
+  line-height:1.55;
+  overflow-x:hidden;
+}
+h1,h2,h3,h4,.display{font-family:'Space Grotesk','Inter',sans-serif;letter-spacing:-.02em;line-height:1.05}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+.grad-text{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* ---------- NAV ---------- */
+.nav{
+  position:sticky;top:0;z-index:50;
+  backdrop-filter:saturate(160%) blur(14px);
+  background:rgba(246,247,251,.72);
+  border-bottom:1px solid var(--line);
+}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:66px}
+.brand{display:flex;align-items:center;gap:12px;font-family:'Space Grotesk';font-weight:700;font-size:18px}
+.brand .dot{
+  width:34px;height:34px;border-radius:10px;background:var(--grad);
+  display:grid;place-items:center;color:#fff;font-size:14px;font-weight:700;
+  box-shadow:0 6px 18px rgba(59,123,255,.35)
+}
+.tabs{display:flex;gap:4px;background:rgba(12,16,36,.05);padding:4px;border-radius:14px}
+.tab{
+  border:0;background:transparent;cursor:pointer;font-family:inherit;font-weight:600;
+  font-size:14px;color:var(--ink-soft);padding:9px 16px;border-radius:10px;transition:.25s
+}
+.tab.active{background:var(--white);color:var(--ink);box-shadow:var(--shadow-sm)}
+.nav-cta{display:none}
+@media(min-width:760px){.nav-cta{display:inline-flex}}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:14px;
+  padding:11px 18px;border-radius:12px;cursor:pointer;border:1px solid transparent;transition:.25s;font-family:inherit
+}
+.btn-primary{background:var(--ink);color:#fff}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(12,16,36,.25)}
+.btn-ghost{background:rgba(255,255,255,.6);border-color:var(--line);color:var(--ink)}
+.btn-ghost:hover{background:#fff;transform:translateY(-2px)}
+
+/* ---------- VIEW SWITCH ---------- */
+.view{display:none;animation:fade .5s ease}
+.view.active{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+/* ---------- HERO ---------- */
+.hero{position:relative;overflow:hidden;background:var(--navy-900);color:#fff}
+.hero::before{
+  content:"";position:absolute;inset:-30%;z-index:0;
+  background:
+    radial-gradient(40% 50% at 18% 22%,rgba(59,123,255,.55),transparent 60%),
+    radial-gradient(38% 48% at 82% 18%,rgba(124,47,214,.50),transparent 60%),
+    radial-gradient(45% 55% at 70% 88%,rgba(43,182,168,.45),transparent 60%),
+    radial-gradient(40% 50% at 25% 90%,rgba(27,42,120,.6),transparent 60%);
+  filter:blur(10px);animation:drift 18s ease-in-out infinite alternate
+}
+@keyframes drift{from{transform:translate3d(0,0,0) scale(1)}to{transform:translate3d(2%,-2%,0) scale(1.08)}}
+.hero .wrap{position:relative;z-index:2;padding:74px 24px 90px}
+.hero-grid{display:grid;gap:46px;align-items:center}
+@media(min-width:920px){.hero-grid{grid-template-columns:1.25fr .9fr}}
+.pill{
+  display:inline-flex;align-items:center;gap:9px;font-size:13px;font-weight:600;
+  padding:8px 14px;border-radius:999px;background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.16);color:#dfe6ff;margin-bottom:22px
+}
+.pill .live{width:8px;height:8px;border-radius:50%;background:#39e0a0;box-shadow:0 0 0 0 rgba(57,224,160,.6);animation:pulse 2s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(57,224,160,.55)}70%{box-shadow:0 0 0 10px rgba(57,224,160,0)}100%{box-shadow:0 0 0 0 rgba(57,224,160,0)}}
+.hero h1{font-size:clamp(40px,7vw,76px);font-weight:700;margin-bottom:8px}
+.hero .sub{font-size:clamp(16px,2.4vw,22px);font-weight:600;color:#b9c4ee;letter-spacing:.01em;margin-bottom:22px}
+.hero p.lede{color:#c7cfe8;font-size:17px;max-width:560px;margin-bottom:30px}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px}
+.btn-on-dark{background:#fff;color:var(--ink)}
+.btn-on-dark:hover{transform:translateY(-2px);box-shadow:0 16px 40px rgba(0,0,0,.4)}
+.btn-line{background:transparent;border-color:rgba(255,255,255,.25);color:#fff}
+.btn-line:hover{background:rgba(255,255,255,.1);transform:translateY(-2px)}
+
+/* photo */
+.portrait{position:relative;justify-self:center}
+.portrait .frame{
+  width:min(330px,78vw);aspect-ratio:1/1.08;border-radius:30px;overflow:hidden;position:relative;
+  background:linear-gradient(160deg,#13204f,#0a1230);border:1px solid rgba(255,255,255,.14);
+  box-shadow:var(--shadow-lg)
+}
+.portrait .frame img{width:100%;height:100%;object-fit:cover}
+.portrait .ph{
+  width:100%;height:100%;display:grid;place-items:center;text-align:center;color:#9fb0e6;
+  background:
+    repeating-linear-gradient(45deg,rgba(255,255,255,.03) 0 12px,transparent 12px 24px),
+    linear-gradient(160deg,#15234f,#0b1230);
+  font-size:13px;padding:24px;gap:8px
+}
+.portrait .ph .ico{font-size:30px}
+.portrait .ring{position:absolute;inset:-14px;border-radius:40px;background:var(--grad);filter:blur(28px);opacity:.45;z-index:-1}
+.stat-row{display:flex;gap:10px;margin-top:18px;flex-wrap:wrap;justify-content:center}
+.stat{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:10px 14px;text-align:center;min-width:96px}
+.stat b{display:block;font-family:'Space Grotesk';font-size:20px}
+.stat span{font-size:11px;color:#aab6e0;letter-spacing:.04em}
+
+/* ---------- SECTION SHELL ---------- */
+section.block{padding:84px 0}
+.eyebrow{font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--blue);margin-bottom:12px}
+.sec-title{font-size:clamp(28px,4.4vw,46px);font-weight:700;margin-bottom:14px}
+.sec-lede{color:var(--muted);font-size:17px;max-width:640px;margin-bottom:42px}
+
+/* ---------- HYBRID ADVANTAGE ---------- */
+.hybrid{background:var(--navy-800);color:#fff;border-radius:0}
+.hybrid .eyebrow{color:#7fa3ff}
+.hybrid .sec-lede{color:#aeb8da}
+.hybrid-grid{display:grid;gap:48px;align-items:center}
+@media(min-width:920px){.hybrid-grid{grid-template-columns:.9fr 1.1fr}}
+.venn{position:relative;width:min(420px,86vw);aspect-ratio:1/1;margin:0 auto}
+.circle{position:absolute;width:62%;aspect-ratio:1;border-radius:50%;mix-blend-mode:screen;display:flex;justify-content:center;align-items:flex-start;padding-top:9%;font-weight:700;font-size:13px;letter-spacing:.04em;text-align:center;border:1px solid rgba(255,255,255,.25)}
+.c1{top:0;left:19%;background:radial-gradient(circle at 50% 40%,rgba(59,123,255,.55),rgba(59,123,255,.12));}
+.c2{top:38%;left:0;align-items:flex-end;justify-content:flex-start;padding:0 0 13% 9%;background:radial-gradient(circle at 50% 60%,rgba(124,47,214,.55),rgba(124,47,214,.12));}
+.c3{top:38%;right:0;align-items:flex-end;justify-content:flex-end;padding:0 9% 13% 0;background:radial-gradient(circle at 50% 60%,rgba(43,182,168,.55),rgba(43,182,168,.12));}
+.venn .core{
+  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  width:34%;aspect-ratio:1;border-radius:18px;background:rgba(255,255,255,.94);color:var(--ink);
+  display:grid;place-items:center;text-align:center;font-family:'Space Grotesk';font-weight:700;font-size:12px;
+  box-shadow:0 18px 50px rgba(0,0,0,.5);z-index:5;mix-blend-mode:normal;padding:8px;line-height:1.15
+}
+.venn .core small{display:block;font-size:9px;color:var(--muted);font-weight:600;margin-top:4px;letter-spacing:.06em}
+.hybrid-list{display:flex;flex-direction:column;gap:14px}
+.hcard{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:20px 22px;transition:.3s}
+.hcard:hover{background:rgba(255,255,255,.09);transform:translateX(4px)}
+.hcard h4{font-size:17px;margin-bottom:6px;display:flex;align-items:center;gap:10px}
+.hcard h4 .tag{width:10px;height:10px;border-radius:3px}
+.hcard p{color:#bcc6e6;font-size:14.5px}
+.talk{margin-top:26px;border-left:3px solid var(--teal);padding:6px 0 6px 20px;color:#dfe6ff;font-style:italic;font-size:15.5px}
+
+/* ---------- HOW I OPERATE ---------- */
+.skillbar{display:flex;border-radius:16px;overflow:hidden;box-shadow:var(--shadow);margin-bottom:42px}
+.seg{padding:22px 18px;color:#fff;font-weight:700;font-family:'Space Grotesk';font-size:15px;flex:1;min-width:0;line-height:1.2;position:relative}
+.seg span{display:block;font-size:11px;font-weight:500;opacity:.85;margin-top:6px;letter-spacing:.04em;font-family:'Inter'}
+.seg.s1{background:var(--brand-navy);flex:1.15}
+.seg.s2{background:var(--blue);flex:1.25}
+.seg.s3{background:var(--purple);flex:.95}
+.seg.s4{background:var(--teal);flex:.85}
+.ops-grid{display:grid;gap:18px;grid-template-columns:1fr}
+@media(min-width:680px){.ops-grid{grid-template-columns:1fr 1fr}}
+@media(min-width:1000px){.ops-grid{grid-template-columns:repeat(4,1fr)}}
+.opcard{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:var(--shadow-sm);transition:.3s}
+.opcard:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.opcard .bar{height:6px;width:46px;border-radius:6px;margin-bottom:16px}
+.opcard h4{font-size:16px;margin-bottom:12px}
+.opcard ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+.opcard li{font-size:14px;color:var(--ink-soft);padding-left:20px;position:relative}
+.opcard li::before{content:"";position:absolute;left:0;top:8px;width:7px;height:7px;border-radius:2px;background:currentColor;opacity:.5}
+
+/* ---------- CHRONICLES ---------- */
+.chron{background:var(--paper)}
+.filterbar{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:34px}
+.fpill{border:1px solid var(--line);background:#fff;color:var(--ink-soft);font-family:inherit;font-weight:600;font-size:13px;padding:8px 15px;border-radius:999px;cursor:pointer;transition:.2s}
+.fpill:hover{border-color:var(--blue);color:var(--blue)}
+.fpill.active{background:var(--ink);color:#fff;border-color:var(--ink)}
+.chron-grid{display:grid;gap:16px;grid-template-columns:1fr}
+@media(min-width:640px){.chron-grid{grid-template-columns:1fr 1fr}}
+@media(min-width:980px){.chron-grid{grid-template-columns:repeat(3,1fr)}}
+.ccard{
+  background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px;
+  display:flex;flex-direction:column;gap:12px;box-shadow:var(--shadow-sm);transition:.3s;position:relative;overflow:hidden
+}
+.ccard::after{content:"";position:absolute;left:0;top:0;height:100%;width:4px;background:var(--grad);opacity:0;transition:.3s}
+.ccard:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.ccard:hover::after{opacity:1}
+.ccard .top{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.ccard .emoji{font-size:26px}
+.ccard .date{font-size:12px;font-weight:600;color:var(--muted);font-family:'Space Grotesk';letter-spacing:.02em}
+.ccard h4{font-size:15.5px;font-weight:600;line-height:1.35;flex:1}
+.ccard .go{font-size:13px;font-weight:600;color:var(--blue);display:inline-flex;align-items:center;gap:6px;margin-top:auto}
+.ccard .go svg{transition:.25s}
+.ccard:hover .go svg{transform:translateX(4px)}
+
+/* ---------- EXPERIENCE ---------- */
+.exp-hero{background:var(--navy-800);color:#fff;padding:70px 0 56px}
+.exp-hero .eyebrow{color:#7fa3ff}
+.exp-hero p{color:#aeb8da;max-width:620px;font-size:17px}
+.timeline{position:relative;padding:60px 0 90px}
+.tl-item{position:relative;padding-left:0;margin-bottom:14px}
+.acc{background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:var(--shadow-sm);transition:.3s}
+.acc.open{box-shadow:var(--shadow)}
+.acc-head{display:flex;align-items:center;gap:18px;padding:20px 22px;cursor:pointer;user-select:none}
+.acc-when{font-family:'Space Grotesk';font-weight:700;font-size:13px;color:var(--blue);min-width:140px;flex-shrink:0}
+.acc-main{flex:1;min-width:0}
+.acc-main h4{font-size:16.5px;margin-bottom:3px}
+.acc-main .co{font-size:13.5px;color:var(--muted);font-weight:600}
+.acc-flag{font-size:12px;color:var(--muted);white-space:nowrap}
+.acc-toggle{width:32px;height:32px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;flex-shrink:0;transition:.3s;color:var(--ink-soft)}
+.acc.open .acc-toggle{background:var(--ink);color:#fff;transform:rotate(45deg)}
+.acc-body{max-height:0;overflow:hidden;transition:max-height .4s ease}
+.acc-body-inner{padding:0 22px 22px 22px}
+.acc-body-inner .divide{height:1px;background:var(--line);margin-bottom:16px}
+.acc-body-inner ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+.acc-body-inner li{font-size:14px;color:var(--ink-soft);padding-left:20px;position:relative}
+.acc-body-inner li::before{content:"›";position:absolute;left:2px;top:-1px;color:var(--blue);font-weight:700}
+.acc-body-inner .value{margin-top:14px;background:var(--grad-soft);border-radius:12px;padding:14px 16px}
+.acc-body-inner .value b{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--purple);display:block;margin-bottom:8px}
+@media(max-width:640px){
+  .acc-head{flex-wrap:wrap;gap:6px 14px}
+  .acc-when{min-width:0;order:1;width:100%}
+  .acc-main{order:3;width:100%}
+  .acc-toggle{order:2;margin-left:auto}
+  .acc-flag{display:none}
+}
+
+/* ---------- META STRIP ---------- */
+.meta{display:grid;gap:16px;grid-template-columns:1fr;margin-top:8px}
+@media(min-width:760px){.meta{grid-template-columns:repeat(3,1fr)}}
+.mcard{background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px;box-shadow:var(--shadow-sm)}
+.mcard h5{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+.mcard .chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{background:var(--paper-2);border-radius:8px;padding:6px 11px;font-size:13px;font-weight:500;color:var(--ink-soft)}
+
+/* ---------- FOOTER ---------- */
+.foot{background:var(--navy-900);color:#fff;padding:64px 0 40px;position:relative;overflow:hidden}
+.foot::before{content:"";position:absolute;inset:-40% -10% auto -10%;height:60%;background:radial-gradient(50% 100% at 50% 0,rgba(59,123,255,.35),transparent 70%);filter:blur(20px)}
+.foot .wrap{position:relative;z-index:2}
+.foot h2{font-size:clamp(28px,5vw,52px);font-weight:700;margin-bottom:10px}
+.foot p{color:#aeb8da;margin-bottom:28px;max-width:520px}
+.contact-row{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:40px}
+.cbtn{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);padding:13px 18px;border-radius:14px;font-weight:600;font-size:14px;transition:.25s}
+.cbtn:hover{background:rgba(255,255,255,.14);transform:translateY(-2px)}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:24px;display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;color:#8b96bd;font-size:13px}
+.disclaimer{font-size:12px;color:#6f7aa3;max-width:560px;margin-top:14px;line-height:1.5}
+.to-top{cursor:pointer}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="https://www.linkedin.com/in/suric/" target="_blank" rel="noopener" aria-label="Suri CM on LinkedIn"><span class="dot"><svg width="18" height="18" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.76-2.05C20.4 8.65 21 11 21 14.1V21h-4v-6.1c0-1.45-.03-3.32-2.02-3.32-2.02 0-2.33 1.58-2.33 3.21V21H9z"/></svg></span> Suri&nbsp;CM</a>
+    <div class="tabs" role="tablist">
+      <button class="tab active" data-view="home">Home</button>
+      <button class="tab" data-view="experience">Experience</button>
+    </div>
+    <a class="btn btn-primary nav-cta" href="#connect">Let's talk</a>
+  </div>
+</header>
+
+<!-- ============ HOME VIEW ============ -->
+<main id="view-home" class="view active">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div>
+          <span class="pill"><span class="live"></span> Principal Architect · Tier-1 Bank · Sydney</span>
+          <h1>Suri <span class="grad-text">CM</span></h1>
+          <div class="sub">Driving AI-Powered Digital Transformation</div>
+          <p class="lede">I sit at a rare intersection - the <b>Buyer</b> who approves enterprise software, the <b>Seller</b> who closes multi-million-dollar deals, and the <b>Technologist</b> who actually codes the prototypes.<br/> I don't just talk AI. I architect it, sell it, and ship it.</p>
+          <div class="hero-cta">
+            <a class="btn btn-on-dark" data-goto="experience" href="#">View Career &nbsp;→</a>
+            <a class="btn btn-line" href="#chronicles">Explore AI Escapades</a>
+          </div>
+        </div>
+        <div class="portrait">
+          <div class="ring"></div>
+          <!-- ============================================================= -->
+          <!-- 📸  REPLACE the src below with your photo URL.                 -->
+          <!--     To use it: set src="https://your-image-url.jpg" and        -->
+          <!--     delete the <div class="ph"> placeholder block.             -->
+          <!-- ============================================================= -->
+          <div class="frame">
+            <img id="profilePhoto" src="https://media.licdn.com/dms/image/v2/D4E03AQHOG4ZOwk6JEg/profile-displayphoto-shrink_800_800/B4EZZp1pPeHMAc-/0/1745532394081?e=1782345600&v=beta&t=J3b3SvAe3txCGF4nQwpyCwmNQfZZNdnhpgHK2RK7txc" alt="Suri CM" style="display:none" onload="this.style.display='block';this.nextElementSibling.style.display='none'" />
+            <div class="ph">
+              <div class="ico">🙂</div>
+              <div><b>Your photo here</b></div>
+              <div style="opacity:.7">Paste your image URL into<br/>&lt;img id="profilePhoto" src="…"&gt;</div>
+            </div>
+          </div>
+          <div class="stat-row">
+            <div class="stat"><b>17+</b><span>YEARS IN TECH</span></div>
+            <div class="stat"><b>$30M+</b><span>DEALS INFLUENCED</span></div>
+            <div class="stat"><b>4</b><span>COUNTRIES</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HYBRID ADVANTAGE -->
+  <section class="block hybrid">
+    <div class="wrap">
+      <div class="reveal">
+        <div class="eyebrow">The Hybrid Advantage</div>
+        <h2 class="sec-title">Where I sit</h2>
+        <p class="sec-lede">Most architects you talk to are either deep technical experts or sales engineers. My edge is that I currently sit on the <b>buyer's</b> side of the table - I know the internal friction, the regulatory fears, and the budget constraints, and I pair that with a seller's grit to navigate the blockers.</p>
+      </div>
+      <div class="hybrid-grid">
+        <div class="venn reveal">
+          <div class="circle c1">CUSTOMER / BUYER</div>
+          <div class="circle c2">TECHNOLOGIST</div>
+          <div class="circle c3">PRE-SALES / SELLER</div>
+          <div class="core">SUCCESSFUL<br/>OUTCOME<small>Value · Feasibility · Innovation</small></div>
+        </div>
+        <div class="hybrid-list reveal">
+          <div class="hcard">
+            <h4><span class="tag" style="background:var(--blue)"></span> The Buyer</h4>
+            <p>Principal Architect at a Tier-1 Bank. I know exactly why banks say "No" to software - because I'm the one currently approving (or rejecting) it.</p>
+          </div>
+          <div class="hcard">
+            <h4><span class="tag" style="background:var(--teal)"></span> The Seller</h4>
+            <p>Led pre-sales engagements resulting in multi-million-dollar deals. I map capability to commercial outcomes, and most of my role is solution-selling within the bank.</p>
+          </div>
+          <div class="hcard">
+            <h4><span class="tag" style="background:var(--purple)"></span> The Technologist</h4>
+            <p>I demonstrate thought leadership and build hands-on AI (Claude Code / Google ADK / Codex). I don't just sell the buzzwords - I code the prototypes.</p>
+          </div>
+          <div class="talk">"I combine a buyer's inside knowledge of friction, regulation and budget with a seller's grit to navigate those blockers."</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW I OPERATE -->
+  <section class="block">
+    <div class="wrap">
+      <div class="reveal">
+        <div class="eyebrow">Weighted Skill Mix</div>
+        <h2 class="sec-title">How I operate</h2>
+        <p class="sec-lede">One person, four operating modes - blended to fit the moment, from boardroom strategy to hands-on builds.</p>
+      </div>
+      <div class="skillbar reveal">
+        <div class="seg s1">Principal Architect<span>AI-first systems</span></div>
+        <div class="seg s2">Solution Engineer<span>Pre-sales &amp; prototyping</span></div>
+        <div class="seg s3">Product Owner<span>Vision &amp; delivery</span></div>
+        <div class="seg s4">Éminence Grise<span>Behind-the-scenes counsel</span></div>
+      </div>
+      <div class="ops-grid">
+        <div class="opcard reveal"><div class="bar" style="background:var(--brand-navy)"></div><h4 style="color:var(--brand-navy)">Principal Architect</h4><ul style="color:var(--brand-navy)"><li>Design AI-first architectures aligned with business goals</li><li>Lead &amp; drive cross-platform, multi-cloud architectural decisions</li></ul></div>
+        <div class="opcard reveal"><div class="bar" style="background:var(--blue)"></div><h4 style="color:var(--blue)">Solution Engineer</h4><ul style="color:var(--blue)"><li>Lead pre-sales discovery &amp; solutioning</li><li>Build &amp; code hands-on prototypes &amp; demos</li></ul></div>
+        <div class="opcard reveal"><div class="bar" style="background:var(--purple)"></div><h4 style="color:var(--purple)">Product Owner</h4><ul style="color:var(--purple)"><li>Define product vision &amp; roadmap</li><li>Drive prioritisation &amp; value-based delivery</li></ul></div>
+        <div class="opcard reveal"><div class="bar" style="background:var(--teal)"></div><h4 style="color:var(--teal)">Éminence Grise</h4><ul style="color:var(--teal)"><li>Advise C-Level executives behind the scenes</li><li>Build cross-functional coalitions for strategic navigation</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHRONICLES -->
+  <section class="block chron" id="chronicles">
+    <div class="wrap">
+      <div class="reveal">
+        <div class="eyebrow">The Chronicles</div>
+        <h2 class="sec-title">My AI escapades 🧪</h2>
+        <p class="sec-lede">An account of my AI experiments since 2024 - built in public, learning out loud. Knowledge is for everyone, so here I go sharing for the world to know.</p>
+      </div>
+      <div class="filterbar reveal" id="yearFilter"></div>
+      <div class="chron-grid" id="chronGrid"></div>
+    </div>
+  </section>
+</main>
+
+<!-- ============ EXPERIENCE VIEW ============ -->
+<main id="view-experience" class="view">
+  <section class="exp-hero">
+    <div class="wrap">
+      <div class="eyebrow">Career</div>
+      <h2 class="sec-title" style="color:#fff">17+ years, 4 countries, one trajectory.</h2>
+      <p>From Salesforce developer in Chennai to AI architect at a Tier-1 bank in Sydney - via Munich and Eindhoven. Tap any role to expand the detail.</p>
+    </div>
+  </section>
+  <section>
+    <div class="wrap timeline">
+      <div id="expList"></div>
+
+      
+    </div>
+  </section>
+</main>
+
+<!-- ============ FOOTER / CONTACT ============ -->
+<footer class="foot" id="connect">
+  <div class="wrap">
+    <h2>Let's build the <span class="grad-text">future</span>.</h2>
+    <p>This page beats a PDF - but I'm one message away.</p>
+    <div class="contact-row">
+      <a class="cbtn" href="https://linkedin.com/in/suric/" target="_blank" rel="noopener">in linkedin.com/in/suric</a>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Suri CM · Built by Suri CM with the help of Claude Code 🚀</span>
+      <span class="to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">Back to top ↑</span>
+    </div>
+    <p class="disclaimer">Disclaimer: Opinions expressed here are Suri CM's own and do not reflect the stance of his employer(s). All AI experiments are personal projects.</p>
+  </div>
+</footer>
+
+<script>
+/* ---------- DATA: The Chronicles ---------- */
+const chronicles = [
+  {d:"2026-06-05",e:"🎨",t:"Generating interactive, self-contained HTML artifacts (diagrams, journeys, decks) with Claude",u:"https://www.linkedin.com/posts/suric_greatminds-ai-claudecode-ugcPost-7468489801839661056-PY7b/"},
+  {d:"2026-03-27",e:"🛠️",t:'"Vibe coding" your own CRM (SuriSense)',u:"https://www.linkedin.com/posts/suric_ai-enterprisesoftware-vibecoding-ugcPost-7443218567816470528-O_Yz/"},
+  {d:"2025-12-31",e:"❤️",t:'"Emotion-based Banking" experiment with Google Antigravity',u:"https://www.linkedin.com/posts/suric_antigravity-fintech-ai-ugcPost-7412031422674268160-FqMm/"},
+  {d:"2025-12-18",e:"🖼️",t:"Experimenting with Google's A2UI (Agent-to-User Interface) framework",u:"https://www.linkedin.com/posts/suric_a2ui-generativeui-a2ui-ugcPost-7407569745761378304-VFDy/"},
+  {d:"2025-12-07",e:"📰",t:'"The Agentic Shift: My Weekly Saves"',u:"https://www.linkedin.com/posts/suric_aiagents-agenticai-gemini3-ugcPost-7403316381133561856-n1dj/"},
+  {d:"2025-11-28",e:"🧠",t:'Building "ShrinkAI," a memory-equipped psychologist agent',u:"https://www.linkedin.com/posts/suric_ai-googlecloud-adk-ugcPost-7399999250572468224-gl6r/"},
+  {d:"2025-11-22",e:"☁️",t:"A live Salesforce AI agent built with Google ADK + Gemini Flash + Salesforce DX MCP + Streamlit",u:"https://www.linkedin.com/posts/suric_antigravity-ai-googleadk-ugcPost-7397916390860623872-ObuS/"},
+  {d:"2025-11-18",e:"🏗️",t:"First impressions of OpenAI's Agent Builder",u:"https://www.linkedin.com/posts/suric_openai-agentbuilder-genai-ugcPost-7396462079395680257-tcSD/"},
+  {d:"2025-09-21",e:"💳",t:"Explainer + hands-on with Google's Agent Payments Protocol (AP2)",u:"https://www.linkedin.com/posts/suric_ai-artificialintelligence-aiagents-ugcPost-7375356759378464768-4N3p/"},
+  {d:"2025-09-13",e:"🤔",t:'"The Truth About AI Hallucinations"',u:"https://www.linkedin.com/posts/suric_why-language-models-hallucinate-ugcPost-7372518260509954048-PSnz/"},
+  {d:"2025-09-02",e:"🚀",t:'Completing Google Cloud\'s "Develop GenAI Apps with Gemini and Streamlit" course',u:"https://www.linkedin.com/posts/suric_genai-gemini-streamlit-ugcPost-7368582954123481088-8onr/"},
+  {d:"2025-08-31",e:"📊",t:'Takeaways from "Boost Productivity with Gemini in BigQuery"',u:"https://www.linkedin.com/posts/suric_googlecloud-bigquery-gemini-ugcPost-7367810261350563841-Rz1Q/"},
+  {d:"2025-08-17",e:"🔷",t:'Learning "Develop AI Agents on Azure"',u:"https://www.linkedin.com/posts/suric_adk-agenticai-enterpriseai-share-7362804909076828162-5CPf/"},
+  {d:"2025-08-10",e:"🔌",t:"Demo of Anthropic's Connectors Directory",u:"https://www.linkedin.com/posts/suric_artificialintelligence-claudeai-aiworkflows-ugcPost-7360201329639612416-JBf7/"},
+  {d:"2025-08-03",e:"☕",t:'Light "Sunday musings" reflection post',u:"https://www.linkedin.com/posts/suric_ai-artificialintelligence-generativeai-ugcPost-7357589065501691904-7fCK/"},
+  {d:"2025-06-21",e:"🤖",t:'Completing Google Cloud\'s "Deploy Multi-Agent Systems with ADK and Agent Engine"',u:"https://www.linkedin.com/posts/suric_genai-googlecloud-aiagents-ugcPost-7342092437579886593-rMmd/"},
+  {d:"2025-06-01",e:"🥧",t:"Fun head-to-head: ChatGPT-4o vs. Gemini 2.5 recreating the 1998 “Pie Bill Gates” game",u:"https://www.linkedin.com/posts/suric_ai-chatgpt-gemini-ugcPost-7334841344491757569-tPqI/"},
+  {d:"2025-05-10",e:"🕸️",t:"Deep dive into Google's Agent-to-Agent (A2A) protocol",u:"https://www.linkedin.com/posts/suric_ai-multiagentsystems-a2a-ugcPost-7326962612267614208-RoCB/"},
+  {d:"2025-04-23",e:"🕹️",t:"Nostalgic post about replaying Prince of Persia (1994)",u:"https://www.linkedin.com/posts/suric_throwback-to-1994-i-remember-playing-ugcPost-7320736845623918592-l3nU/"},
+  {d:"2025-04-19",e:"💬",t:'Built "AskSuri," a sarcastic Flask chatbot, entirely via OpenAI Codex',u:"https://www.linkedin.com/posts/suric_tldr-i-asked-openai-codex-to-build-me-ugcPost-7319333550208528384-KP-8/"},
+  {d:"2025-03-09",e:"🗣️",t:"Sunday experiment having ChatGPT converse with Sesame AI's voice model (Maya)",u:"https://www.linkedin.com/posts/suric_chatgpt-ai-voiceai-ugcPost-7304353809219129344-b1hJ/"},
+  {d:"2024-12-07",e:"🖥️",t:"Exploring Anthropic Claude's new Computer Use feature",u:"https://www.linkedin.com/posts/suric_ai-innovation-anthropic-ugcPost-7271033608411193345-hTb3/"},
+  {d:"2024-09-30",e:"🎬",t:'Takeaways from the "Explore Generative AI with the Vertex AI Gemini API" skill badge',u:"https://www.linkedin.com/posts/suric_this-is-a-really-good-one-with-more-technical-share-7246344383011192832-LrFw/"},
+  {d:"2024-07-13",e:"📓",t:'Reflections on the "Prompt Design in Vertex AI" course',u:"https://www.linkedin.com/posts/suric_python-jupyterlab-jupyternotebooks-ugcPost-7217806578140241920-156L/"}
+];
+
+/* ---------- DATA: Work Experience (reverse chronological) ---------- */
+const experience = [
+  {when:"Oct 2023 - Present",role:"Principal Architect | Customer & Digital",co:"Macquarie Bank",loc:"🇦🇺 Sydney",
+   points:["Strategic architect for AI-driven transformation across Macquarie's customer- and employee-facing platforms.","Customer-facing AI solutions with complex integration landscapes - Google Customer Engagement Suite and Google ADK.","Employee-facing AI - democratised Agentic AI using Gemini Enterprise workspaces.","Forge executive relationships to pinpoint and drive high-priority opportunities and execute the next-gen AI strategy.","Build strong business cases for AI investment - quantifying ROI in cost-to-serve, productivity uplift and NPS.","Bridge executive vision and technical execution, partnering with engineering on feasibility and scalable roadmaps."]},
+  {when:"Sep 2022 - Sep 2023",role:"Head of Presales & Architecture | CTO",co:"Innovior",loc:"🇦🇺 Sydney",
+   points:["Managed a team of architects leading presales engagements - reporting to the CEO.","Identified key capabilities and technology enablers, linking them to business outcomes.","Trusted advisor to CIO / CTO / EA-level contacts driving continuous business transformation.","Developed business proposals, Enterprise Architecture artefacts, solution roadmaps and executive presentations."],
+   value:["Validated a $7M–$9M opportunity pipeline into qualified proposals - of which $4M resulted in Closed Won.","Grew the Salesforce team from 4 to 28 consultants.","Ensured project profitability of at least 40% with appropriate resourcing.","Helped lead & drive a $17M TCV deal with the Salesforce account team."]},
+  {when:"Jan 2021 - Sep 2022",role:"Senior Program Architect",co:"Salesforce",loc:"🇦🇺 Sydney",
+   points:["Trusted advisor to large, complex enterprise customers, driving key elements of their digitisation programs.","Demonstrated thought leadership on Salesforce platform & overall Enterprise Architecture strategy.","Built Value-Acceleration Proofs of Concept to win stakeholder buy-in and Architecture Board approval.","Showcased complex technical solutions in simple, clear business language; enabled in-house Salesforce teams."],
+   value:["Sales team sought my expertise to help close a $4.7M TCV deal.","Saved the customer $1.5M p.a. in consulting & implementation cost.","Saved $2M p.a. in licensing through key architecture decisions."]},
+  {when:"May 2019 - Dec 2020",role:"Senior Solutions Architect",co:"Macquarie Bank",loc:"🇦🇺 Sydney",
+   points:["Workshopped, designed & prototyped technical architectures across multiple programs.","Direct Home Loans app on an AWS front-end integrated to Salesforce for address validation & credit scoring via custom Apex REST APIs.","Integration architecture for uni/bi-directional sync across Salesforce, Marketing Cloud & on-prem - CDC, API gateway, message bus, microservices.","COVID-19 financial assistance platform on Customer Community & Service Cloud with Omni-Channel and CTI call-centre integration.","Online portal for 1K+ mortgage brokers - networking, intro courses & accreditation.","Founded and led fortnightly 'Salesforce Engineering Guild' sessions for 30+ consultants & developers."]},
+  {when:"May 2018 - May 2019",role:"Technical Consulting Lead | Salesforce",co:"DXC Technology",loc:"🇦🇺 Sydney",
+   points:["Lead Architect at Kayo Sports - design, architecture, implementation & governance of a high-quality customer service solution for a sports streaming service.","Built on Salesforce Service Cloud, Einstein Bot, Customer Community, Knowledge, Social Studio, AppExchange & external integrations.","Directly managed a team of 7 developers."]},
+  {when:"Oct 2016 - May 2018",role:"Senior Program Architect",co:"Salesforce",loc:"🇩🇪 Munich",
+   points:["'Trusted Advisor' role - fully certified Salesforce strategic advisor.","Guided, transformed and optimised businesses across org strategy, integration, identity management, deployment, governance & technical optimisation."]},
+  {when:"Oct 2015 - Sep 2016",role:"Senior Consultant - SAP-SuccessFactors",co:"Pentos",loc:"🇩🇪 Munich",
+   points:["Scoping, design & implementation of SuccessFactors Recruiting Marketing (RMK) and Core HCM Foundation.","Web-service integration via SOAP & OData APIs with HANA-Cloud and Dell-Boomi middleware.","Project scoping, technical analysis and Proof-of-Concept development across SuccessFactors projects."]},
+  {when:"Nov 2014 - Sep 2015",role:"Senior Associate - Salesforce Architect",co:"Cognizant",loc:"🇩🇪 Munich",
+   points:["Solution Architect & Technical Consultant for Salesforce projects across the DACH region.","Business development & presales activities in the Salesforce CRM domain across DACH."]},
+  {when:"Oct 2012 - Sep 2014",role:"Cloud Architect (Salesforce)",co:"PARX GmbH | Persistent",loc:"🇩🇪 Munich",
+   points:["Senior Salesforce developer for projects across various verticals in the DACH region."]},
+  {when:"Dec 2011 - Jul 2012",role:"Trainee - IT Process Excellence",co:"Philips Lighting",loc:"🇳🇱 Eindhoven",
+   points:["Internship & Master's thesis: 'The impact of Enterprise Architecture services on IT project selection'."]},
+  {when:"Oct 2008 - Jun 2010",role:"Salesforce Developer",co:"Lister Technologies | Bounteous",loc:"🇮🇳 Chennai",
+   points:["Early-career Salesforce development - the foundation of a 17-year platform & architecture journey."]}
+];
+
+/* ---------- RENDER: Chronicles ---------- */
+const arrow = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+const fmtDate = s => new Date(s+"T00:00:00").toLocaleDateString('en-AU',{day:'numeric',month:'short',year:'numeric'});
+const grid = document.getElementById('chronGrid');
+const yearFilter = document.getElementById('yearFilter');
+const years = ['All', ...Array.from(new Set(chronicles.map(c=>c.d.slice(0,4))))];
+
+function renderChron(year){
+  grid.innerHTML = chronicles
+    .filter(c => year==='All' || c.d.startsWith(year))
+    .map(c => `
+      <a class="ccard reveal in" href="${c.u}" target="_blank" rel="noopener">
+        <div class="top"><span class="emoji">${c.e}</span><span class="date">${fmtDate(c.d)}</span></div>
+        <h4>${c.t}</h4>
+        <span class="go">Read the post ${arrow}</span>
+      </a>`).join('');
+}
+yearFilter.innerHTML = years.map((y,i)=>`<button class="fpill ${i===0?'active':''}" data-year="${y}">${y==='All'?'All years':y}</button>`).join('');
+yearFilter.addEventListener('click', e=>{
+  const b = e.target.closest('.fpill'); if(!b) return;
+  yearFilter.querySelectorAll('.fpill').forEach(p=>p.classList.remove('active'));
+  b.classList.add('active');
+  renderChron(b.dataset.year);
+});
+renderChron('All');
+
+/* ---------- RENDER: Experience ---------- */
+const plus = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>';
+document.getElementById('expList').innerHTML = experience.map((x,i)=>`
+  <div class="tl-item reveal">
+    <div class="acc" data-acc>
+      <div class="acc-head">
+        <div class="acc-when">${x.when}</div>
+        <div class="acc-main"><h4>${x.role}</h4><div class="co">${x.co}</div></div>
+        <div class="acc-flag">${x.loc}</div>
+        <div class="acc-toggle">${plus}</div>
+      </div>
+      <div class="acc-body">
+        <div class="acc-body-inner">
+          <div class="divide"></div>
+          <ul>${x.points.map(p=>`<li>${p}</li>`).join('')}</ul>
+          ${x.value?`<div class="value"><b>Value Delivered</b><ul>${x.value.map(v=>`<li>${v}</li>`).join('')}</ul></div>`:''}
+        </div>
+      </div>
+    </div>
+  </div>`).join('');
+
+/* accordion */
+document.querySelectorAll('[data-acc]').forEach((acc,idx)=>{
+  const head = acc.querySelector('.acc-head');
+  const body = acc.querySelector('.acc-body');
+  head.addEventListener('click',()=>{
+    const open = acc.classList.toggle('open');
+    body.style.maxHeight = open ? body.scrollHeight + 'px' : 0;
+  });
+  if(idx===0){ acc.classList.add('open'); body.style.maxHeight = body.scrollHeight + 'px'; }
+});
+
+/* ---------- VIEW SWITCHING ---------- */
+const views = {home:document.getElementById('view-home'),experience:document.getElementById('view-experience')};
+const tabs = document.querySelectorAll('.tab');
+function switchView(v){
+  Object.entries(views).forEach(([k,el])=>el.classList.toggle('active',k===v));
+  tabs.forEach(t=>t.classList.toggle('active',t.dataset.view===v));
+  window.scrollTo({top:0,behavior:'instant' in window ? 'instant' : 'auto'});
+  // recalc open accordions after display
+  if(v==='experience'){document.querySelectorAll('.acc.open').forEach(a=>{a.querySelector('.acc-body').style.maxHeight=a.querySelector('.acc-body').scrollHeight+'px';});}
+  revealAll();
+}
+tabs.forEach(t=>t.addEventListener('click',()=>switchView(t.dataset.view)));
+document.querySelectorAll('[data-goto]').forEach(el=>el.addEventListener('click',e=>{e.preventDefault();switchView(el.dataset.goto);}));
+
+/* ---------- SCROLL REVEAL ---------- */
+const io = new IntersectionObserver(entries=>{
+  entries.forEach(en=>{ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target);} });
+},{threshold:.12});
+function revealAll(){ document.querySelectorAll('.reveal:not(.in)').forEach(el=>io.observe(el)); }
+revealAll();
+
+</script>
+</body>
+</html>
