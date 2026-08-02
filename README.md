@@ -14,7 +14,7 @@ Knowledge is for everyone — and hence here I go, sharing for the world to know
 
 | # | 📅 Date | 💭 Topic | 🔗 Reference |
 |---|---------|----------|--------------|
-| 1 | 2026-06-14 | 🏦🤖 My experiment with what a next-generation AI banking assistant could feel and sound like - meet Penny. 💡 | [Post](https://www.linkedin.com/posts/suric_agenticai-bankingai-voiceai-ugcPost-7471785165657149441-tvDd/) |
+| 1 | 2026-06-14 | 🏦🤖 My experiment with what a next-generation AI banking assistant could feel and sound like - meet Penny. 💡 | [Post](https://www.youtube.com/shorts/amQZ8Jybo_o) |
 | 2 | 2026-06-05 | 🎨 Generating interactive, self-contained HTML artifacts (diagrams, journeys, decks) with Claude | [Post](https://www.linkedin.com/posts/suric_greatminds-ai-claudecode-ugcPost-7468489801839661056-PY7b/) |
 | 3 | 2026-03-27 | 🛠️ "Vibe coding" your own CRM (SuriSense) | [Post](https://www.linkedin.com/posts/suric_ai-enterprisesoftware-vibecoding-ugcPost-7443218567816470528-O_Yz/) |
 | 4 | 2025-12-31 | ❤️ "Emotion-based Banking" experiment with Google Antigravity | [Post](https://www.linkedin.com/posts/suric_antigravity-fintech-ai-ugcPost-7412031422674268160-FqMm/) |
